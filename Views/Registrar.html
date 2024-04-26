@@ -4,11 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Css/Registrar.css" rel="stylesheet" />
+    <link href="../Css/Main.css" rel="stylesheet" />
     <title>Registrar</title>
 </head>
 
 <body>
+    <div class="div-main">
+        <form class="form">
+            <h1>Sabor Fit</h1>
 
+            <div class="component-input">
+                <label class="label" for="nome">Nome:</label><br>
+                <input class="input" type="text" id="nome" name="nome"><br><br>
+            </div>
+
+            <div class="component-input">
+                <label class="label" for="email">E-mail:</label><br>
+                <input class="input" type="email" id="email" name="email"><br><br>
+            </div>
+
+            <div class="component-input">
+                <label class="label" for="senha">Senha:</label><br>
+                <input class="input" type="password" id="senha" name="senha"><br><br>
+            </div>
+
+            <div class="component-input">
+                <label class="label" for="confirmar_senha">Confirmar Senha:</label><br>
+                <input class="input" type="password" id="confirmar_senha" name="confirmar_senha"><br><br>
+            </div>
+
+            <div class="component-input">
+                <label class="label" for="data_nascimento">Data de Nascimento:</label><br>
+                <input class="input" type="date" id="data_nascimento" name="data_nascimento"><br><br>
+            </div>
+
+            <div class="">
+                <label class="label" for="possui_conta">Já possui conta?</label>
+                <a href="">Entrar</a>
+            </div>
+
+            <input class="button-submit" type="submit" value="Cadastrar">
+        </form>
+        <div>
+            <img src="../Pictures/v2_41.png" alt="Comida deliciosa">
+        </div>
+    </div>
 </body>
 
 </html>

@@ -2,7 +2,9 @@ body,
 html {
     height: 100%;
     margin: 0;
+    background-color: #99CA5B;
     padding: 0;
+    overflow: hidden
 }
 
 .div-main {
@@ -13,7 +15,6 @@ html {
 .form {
     width: 35%;
     height: 100%;
-    background-color: #99CA5B;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,4 +49,9 @@ html {
 .button-submit:hover{
     background-color: rgb(223, 223, 223);
     cursor: pointer;
+}
+.imgFundo{
+    height: 101%;
+    width: 100%;
+    border-bottom-left-radius: 500px;
 }

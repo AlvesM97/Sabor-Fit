@@ -11,7 +11,7 @@
 
 <body>
     <div class="div-main">
-        <form class="form">
+        <form class="form" id="loginForm" onsubmit="return validateForm()">
             <h1>SABOR FIT</h1>
 
             <div class="component-input">
@@ -29,12 +29,29 @@
                 <a href="Registrar.html" id="cadastrar">Cadastre-se</a><br>
                 <label id="esqueceuSenha" for="possui_conta">Esqueceu sua senha?</label>
             </div>
-                <input class="button-submit" type="submit" value="Login">
+
+            <!-- Use o tipo de botão "submit" -->
+            <input class="button-submit" type="submit" value="Login" />
+
         </form>
         <div>
             <img src="../Pictures/imgLogin.png" alt="fundo" class="imgFundo">
         </div>
     </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            if (email === "" || senha === "") {
+                alert("Por favor, preencha todos os campos.");
+                return false;
+            }
+            window.location.href = "Categoria.html";
+            return false;
+        }
+    </script>
 </body>
 
 </html>

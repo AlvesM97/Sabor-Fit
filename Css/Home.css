@@ -22,10 +22,17 @@ body{
     align-items: center;
 }
 .img-fundo{
-    background-image: url(/Pictures/banner-home.png);
-    background-size: 1700px 850px;
+    background-image: url(/Pictures/fundo.png);
+    background-size: 1580px 450px;
     background-repeat: no-repeat;
-
+    display: flex;
+}
+.container-prato{
+    align-content: center;
+}
+#img-prato{
+    height: 50%;
+    padding-left: 65%;
 }
 p{
     font-family: "Montserrat", sans-serif;

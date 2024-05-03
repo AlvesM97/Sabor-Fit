@@ -58,8 +58,8 @@ a:-webkit-any-link {
 }
 .container{
     padding-left: 175px;
-    padding-top: 100px;
-    padding-bottom: 170px;
+    align-content: center;
+
 }
 .container-search{
     position: relative;

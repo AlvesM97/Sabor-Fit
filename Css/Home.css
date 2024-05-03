@@ -1,0 +1,179 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-color: #99CA5B;
+}
+.header-button{
+    cursor: pointer;
+}
+.itens{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap: 40px;
+}
+.user{
+    font-size: 35px !important;
+}
+.icon{
+    display: flex;
+    align-items: center;
+}
+.img-fundo{
+    background-image: url(/Pictures/banner-home.png);
+    background-size: 1700px 850px;
+    background-repeat: no-repeat;
+
+}
+p{
+    font-family: "Montserrat", sans-serif;
+}
+a:-webkit-any-link {
+    color: initial;
+    cursor: initial;
+    text-decoration: initial;
+    text-decoration-line: initial;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
+#home{
+    font-weight: bold;
+}
+#title{
+    font-weight: bold;
+    font-size: 20px;
+}
+#subtitle{
+    opacity: 70%;
+}
+.container{
+    padding-left: 175px;
+    padding-top: 100px;
+    padding-bottom: 170px;
+}
+.container-search{
+    position: relative;
+    display: inline-block;
+}
+#search{
+    border: 1px solid #C6C6C6;
+    border-radius: 24px;
+    outline: none;
+    height: 25px;
+    padding-right: 2em; /* Espaço para o ícone */
+    width: 199%;
+    padding-left: 1em;
+}
+#search::placeholder{
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+}
+.icon-search{
+    font-size: 20px !important;
+    position: absolute;
+    right: -112%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+    height: auto;
+}
+.categorias{
+    padding: 30px 50px 30px 50px;
+}
+.itens-categorias{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.format-text{
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+
+}
+.button-categorias{
+    border: 1px solid black;
+    border-radius: 14px;
+    width: 14%;
+    height: 25px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+}
+.button-categorias:hover{
+    background-color: #99CA5B;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25); 
+    
+
+}
+.title-subtitles{
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.title-receita{
+    left: 11px; 
+    top: 145px; 
+    position: absolute;
+    font-weight: bold;
+}
+.receita{
+    width: 216px;
+    height: 230px;
+    position: relative
+}
+.retanguloBaixo{
+    width: 216px;
+    height: 230px;
+    left: 0px;
+    top: 0px;
+    position: absolute; 
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); 
+    border-radius: 24px
+}
+.retanguloCima{
+    width: 216px; 
+    height: 151px; 
+    left: 0px; 
+    top: 0.10px; 
+    position: absolute; 
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px
+}
+.descricao{
+    display: flex;
+    width: 170px;
+    height: 23px;
+    left: 25px;
+    top: 200px;
+    position: absolute;
+    gap: 60px;
+}
+.text-descricao{
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-size: small;
+    top: 4px;
+    margin-left: 6px;
+}
+.icon-kcal{
+    left: px;
+}
+.itens-recomendacoes{
+    display: flex;
+    justify-content: space-around;
+}
+.recomendacoes{
+    padding: 30px 150px 30px 150px;
+
+}
+
+.retanguloBaixo:hover{
+    background-color: #99CA5B;
+}
+.receita:hover{
+    cursor: pointer;
+}   

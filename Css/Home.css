@@ -57,14 +57,12 @@ a:-webkit-any-link {
     text-decoration-style: initial;
     text-decoration-color: initial;
 }
-
 #home {
     font-weight: bold;
 }
 
 #title {
-    font-weight: bold;
-    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
 }
 
 #subtitle {

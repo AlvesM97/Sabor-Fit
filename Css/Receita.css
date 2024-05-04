@@ -1,0 +1,24 @@
+.header {
+    background-color: #99CA5B;
+}
+
+.header-button {
+    cursor: pointer;
+}
+
+.itens {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap: 40px;
+}
+
+a:-webkit-any-link {
+    color: initial;
+    cursor: initial;
+    text-decoration: initial;
+    text-decoration-line: initial;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}

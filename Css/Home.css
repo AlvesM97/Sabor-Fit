@@ -1,42 +1,53 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
-.header{
+
+.header {
     background-color: #99CA5B;
 }
-.header-button{
+
+.header-button {
     cursor: pointer;
 }
-.itens{
+
+.itens {
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
     gap: 40px;
 }
-.user{
+
+.user {
     font-size: 35px !important;
 }
-.icon{
+
+.icon {
     display: flex;
     align-items: center;
 }
-.img-fundo{
+
+.img-fundo {
     background-image: url(/Pictures/fundo.png);
-    background-size: 1580px 450px;
+    background-size: 1950px 450px;
     background-repeat: no-repeat;
     display: flex;
+    justify-content: center;
 }
-.container-prato{
+
+.container-prato {
     align-content: center;
+    padding-left: 30%;
 }
-#img-prato{
-    height: 50%;
-    padding-left: 65%;
+
+#img-prato {
+    height: 64%;
 }
-p{
+
+p {
     font-family: "Montserrat", sans-serif;
 }
+
 a:-webkit-any-link {
     color: initial;
     cursor: initial;
@@ -46,39 +57,47 @@ a:-webkit-any-link {
     text-decoration-style: initial;
     text-decoration-color: initial;
 }
-#home{
+
+#home {
     font-weight: bold;
 }
-#title{
+
+#title {
     font-weight: bold;
     font-size: 20px;
 }
-#subtitle{
+
+#subtitle {
     opacity: 70%;
 }
-.container{
+
+.container {
     padding-left: 175px;
     align-content: center;
 
 }
-.container-search{
+
+.container-search {
     position: relative;
     display: inline-block;
 }
-#search{
+
+#search {
     border: 1px solid #C6C6C6;
     border-radius: 24px;
     outline: none;
     height: 25px;
-    padding-right: 2em; /* Espaço para o ícone */
+    padding-right: 2em;
     width: 199%;
     padding-left: 1em;
 }
-#search::placeholder{
+
+#search::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
 }
-.icon-search{
+
+.icon-search {
     font-size: 20px !important;
     position: absolute;
     right: -112%;
@@ -87,20 +106,24 @@ a:-webkit-any-link {
     width: 10%;
     height: auto;
 }
-.categorias{
+
+.categorias {
     padding: 30px 50px 30px 50px;
 }
-.itens-categorias{
+
+.itens-categorias {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
-.format-text{
+
+.format-text {
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
 
 }
-.button-categorias{
+
+.button-categorias {
     border: 1px solid black;
     border-radius: 14px;
     width: 14%;
@@ -109,48 +132,55 @@ a:-webkit-any-link {
     align-content: center;
     cursor: pointer;
 }
-.button-categorias:hover{
+
+.button-categorias:hover {
     background-color: #99CA5B;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25); 
-    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+
 
 }
-.title-subtitles{
+
+.title-subtitles {
     font-weight: bold;
     margin-bottom: 35px;
     text-align: center;
 }
-.title-receita{
-    left: 11px; 
-    top: 145px; 
+
+.title-receita {
+    left: 11px;
+    top: 145px;
     position: absolute;
     font-weight: bold;
 }
-.receita{
+
+.receita {
     width: 216px;
     height: 230px;
     position: relative
 }
-.retanguloBaixo{
+
+.retanguloBaixo {
     width: 216px;
     height: 230px;
     left: 0px;
     top: 0px;
-    position: absolute; 
+    position: absolute;
     background: white;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 24px
 }
-.retanguloCima{
-    width: 216px; 
-    height: 151px; 
-    left: 0px; 
-    top: 0.10px; 
-    position: absolute; 
-    border-top-left-radius: 25px; 
+
+.retanguloCima {
+    width: 216px;
+    height: 151px;
+    left: 0px;
+    top: 0.10px;
+    position: absolute;
+    border-top-left-radius: 25px;
     border-top-right-radius: 25px
 }
-.descricao{
+
+.descricao {
     display: flex;
     width: 170px;
     height: 23px;
@@ -159,28 +189,75 @@ a:-webkit-any-link {
     position: absolute;
     gap: 60px;
 }
-.text-descricao{
+
+.text-descricao {
     position: absolute;
     font-family: "Montserrat", sans-serif;
     font-size: small;
     top: 4px;
     margin-left: 6px;
 }
-.icon-kcal{
-    left: px;
-}
-.itens-recomendacoes{
+
+.itens-recomendacoes {
     display: flex;
     justify-content: space-around;
 }
-.recomendacoes{
-    padding: 30px 150px 30px 150px;
+
+.recomendacoes {
+    padding: 30px 200px 200px 200px;
 
 }
 
-.retanguloBaixo:hover{
+.retanguloBaixo:hover {
     background-color: #99CA5B;
 }
-.receita:hover{
+
+.receita:hover {
     cursor: pointer;
-}   
+}
+
+.footer {
+    height: 240px;
+}
+
+.container-footer {
+    height: 145px;
+    left: 0px;
+    top: 0px;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding: 10px 30px 10px 30px;
+
+}
+
+.img-utf {
+    height: 25%;
+}
+.container-img{
+    padding-left: 80%;
+    align-content: center;
+}
+
+.alunos {
+    align-content: center;
+
+}
+
+#nome-alunos {
+    font-size: 16px;
+    width: max-content;
+}
+
+#title-alunos {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-ano {
+    top: 211px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 30px;
+}

@@ -4,7 +4,9 @@ html {
     margin: 0;
     padding: 0;
     background-color: #99CA5B;
-    overflow: hidden
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+
 }
 
 .div-main {

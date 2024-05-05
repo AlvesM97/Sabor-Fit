@@ -40,55 +40,83 @@
 
 <body>
     <div id="container">
-        <div id="calculator">
-            <form id="form">
-                <h1 id="title">
-                    Calculadora - IMC
-                </h1>
+        <div id="texto-explicativo">
+            <h1>O que é e como calcular o IMC?</h1>
+            <p>
+                O Índice de Massa Corporal (IMC) é uma medida que relaciona o peso e a altura de uma pessoa, sendo
+                utilizada para avaliar se ela está dentro de um peso considerado saudável em relação à sua altura. Essa
+                é uma ferramenta útil para avaliar o risco de problemas de saúde relacionados ao peso, como obesidade ou
+                baixo peso.
+                <br />O cálculo do IMC é relativamente simples e é feito através da seguinte fórmula:<br/><br/>
+                <span id="formula">IMC = Peso (metros) / Altura² (kg)</span>
+                <br/><br/>
+                A interpretação dos valores de IMC é feita da seguinte forma:
+                <br />
+                <ul>
+                    <li>IMC abaixo de 18,5: Abaixo do peso.</li>
+                    <li>IMC entre 18,5 e 24,9: Peso saudável.</li>
+                    <li>IMC entre 25,0 e 29,9: Sobrepeso.</li>
+                    <li>IMC entre 30,0 e 34,9: Obesidade grau I.</li>
+                    <li>IMC entre 35,0 e 39,9: Obesidade grau II (severa).</li>
+                    <li>IMC acima de 40,0: Obesidade grau III (mórbida).</li>
+                </ul>
+                <br />
+                É importante ressaltar que o IMC é uma ferramenta inicial de avaliação e não leva em consideração outros
+                fatores importantes como a composição corporal, como a proporção de gordura e músculos. Portanto, em
+                alguns casos, pode não ser completamente preciso para determinar o estado de saúde de uma pessoa. Sempre
+                é recomendado consultar um profissional de saúde para uma avaliação mais completa e precisa.
+            </p>
+        </div>
+        <div id="container-calculadora">
+            <div id="calculator">
+                <form id="form">
+                    <h1 id="title">
+                        Calculadora - IMC
+                    </h1>
 
-                <!-- PESO -->
-                <div class="input-box">
-                    <label for="weight">Peso em kg</label>
-                    <div class="input-field">
-                        <span class="material-symbols-outlined" id="balanca">
-                            monitor_weight
-                        </span>
-                        <input type="number" id="weight" required placeholder="Digite seu peso">
-                        <span>kg</span>
+                    <!-- PESO -->
+                    <div class="input-box">
+                        <label for="weight">Peso em kg</label>
+                        <div class="input-field">
+                            <span class="material-symbols-outlined" id="balanca">
+                                monitor_weight
+                            </span>
+                            <input type="number" id="weight" required placeholder="Digite seu peso">
+                            <span>kg</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- ALTURA -->
-                <div class="input-box">
-                    <label for="height">Altura em metros</label>
-                    <div class="input-field">
-                        <span class="material-symbols-outlined" id="regua">
-                            straighten
-                        </span>
-                        <input type="number" step="0.01" id="height" required placeholder="Digite sua altura">
-                        <span>m</span>
+                    <!-- ALTURA -->
+                    <div class="input-box">
+                        <label for="height">Altura em metros</label>
+                        <div class="input-field">
+                            <span class="material-symbols-outlined" id="regua">
+                                straighten
+                            </span>
+                            <input type="number" step="0.01" id="height" required placeholder="Digite sua altura">
+                            <span>m</span>
+                        </div>
                     </div>
-                </div>
-                <button id="calculate">Calcular</button>
-            </form>
-            <div id="infos" class="hidden">
-                <div id="result">
-                    <div id="imc">
-                        <span id="value"></span>
-                        <span>Seu IMC</span>
+                    <button id="calculate">Calcular</button>
+                </form>
+                <div id="infos" class="hidden">
+                    <div id="result">
+                        <div id="imc">
+                            <span id="value"></span>
+                            <span>Seu IMC</span>
+                        </div>
+                        <div id="description">
+                            <span></span>
+                        </div>
                     </div>
-                    <div id="description">
-                        <span></span>
-                    </div>
-                </div>
 
-                <div id="more-info">
-                    <span>Clique</span>
-                    <a href="https://mundoeducacao.uol.com.br/saude-bem-estar/imc.htm" title="IMC - Uol"
-                        target="_blank">
-                         aqui
-                    </a>
-                    <span>para saber mais informações sobre IMC</span>
+                    <div id="more-info">
+                        <span>Clique</span>
+                        <a href="https://www.tuasaude.com/imc/" title="IMC - tuasaude" target="_blank">
+                            aqui
+                        </a>
+                        <span>para saber mais informações sobre IMC</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,15 +159,15 @@
 
         if (imc < 18.5) {
             description = 'Cuidado! Você está abaixo do peso'
-        } else if (imc >= 18.5 && imc <= 25) {
+        } else if (imc >= 18.5 && imc < 25) {
             description = 'Você está no peso "ideal"!'
             value.classList.remove('attention');
             value.classList.add('normal');
-        } else if (imc > 25 && imc <= 30) {
+        } else if (imc >= 25 && imc < 30) {
             description = 'Cuidado! Você está com sobrepeso'
-        } else if (imc > 30 && imc <= 35) {
+        } else if (imc >= 30 && imc < 35) {
             description = 'Cuidado! Você está com obesidade moderada!'
-        } else if (imc > 35 && imc <= 40) {
+        } else if (imc >= 35 && imc < 40) {
             description = 'Cuidado! Você está com obesidade severa!'
         } else {
             description = 'Cuidado! Você está com obesidade mórbida!'

@@ -1,6 +1,19 @@
 #header-imc{
     font-weight: bold;
 }
+#container{
+    display: flex;
+    gap: 45px;
+    padding: 50px;
+    justify-content: center;
+
+}
+#texto-explicativo{
+    width: 65%;
+}
+#formula{
+    font-weight: bold;
+}
 a:-webkit-any-link {
     color: initial;
     cursor: initial;
@@ -22,11 +35,10 @@ body {
 
 }
 
-#container{
+#container-calculadora{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4% 0px 4% 0px;
 
 }
 
@@ -109,6 +121,8 @@ body {
     padding: 0.5rem 0;
     border-radius: 22px;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+
 }
 
 #result{
@@ -142,7 +156,6 @@ body {
 #more-info a{
     font-size: 16px;
     text-decoration: none;
-    transition: color 0.5s;
     cursor: pointer;
     font-weight: bold;
 }

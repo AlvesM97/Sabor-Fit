@@ -24,16 +24,23 @@
         </div>
         <div class="itens">
             <a href="/Views/Home.html">
-                <p class="header-button">Início</p>
+                <p class="header-button" id="home">Início</p>
             </a>
             <a href="/Views/Imc.html">
                 <p class="header-button" id="header-imc">Descubra seu IMC</p>
             </a>
-            <div class="icon header-button">
+            <div class="icon header-button" id="menu-btn">
                 <span class="material-symbols-outlined user">
                     account_circle
                 </span>
-            </div>
+                <div id="menu" class="menu esconder">
+                    <a href="/Views/Login.html" id="logout">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        Sair
+                    </a>
+                </div>
         </div>
     </div>
 </header>
@@ -176,6 +183,14 @@
         value.textContent = imc.replace('.', ',');
         document.getElementById('description').textContent = description
     })
+    document.getElementById("menu-btn").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            if (menu.classList.contains("esconder")) {
+                menu.classList.remove("esconder");
+            } else {
+                menu.classList.add("esconder");
+            }
+    });
 </script>
 
 </html>

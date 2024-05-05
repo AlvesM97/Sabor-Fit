@@ -33,10 +33,18 @@
             <a href="/Views/Imc.html">
                 <p class="header-button" id="header-imc">Descubra seu IMC</p>
             </a>
-            <div class="icon header-button">
+            <div class="icon header-button" id="menu-btn">
                 <span class="material-symbols-outlined user">
                     account_circle
                 </span>
+                <div id="menu" class="menu esconder">
+                    <a href="/Views/Login.html" id="logout">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        Sair
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -193,6 +201,16 @@
 
         </div>
     </div>
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            if (menu.classList.contains("esconder")) {
+                menu.classList.remove("esconder");
+            } else {
+                menu.classList.add("esconder");
+            }
+        });
+    </script>
 </body>
 
 <footer>

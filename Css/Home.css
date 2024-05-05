@@ -1,5 +1,5 @@
 .img-fundo {
-    background-image: url(../Pictures/fundo.png);
+    background-image: url("../Pictures/fundo.png");
     background-size: 1950px 450px;
     background-repeat: no-repeat;
     display: flex;

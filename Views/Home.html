@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/Css/Home.css">
     <link rel="stylesheet" href="/Css/Main.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,39 +21,38 @@
     <title>Home</title>
 </head>
 
-<header>
-    <div class="header">
-        <div id="container-logo">
-            <img src="/Pictures/logo.png" alt="logo" id="logo">
-        </div>
-        <div class="itens">
-            <a href="/Views/Home.html">
-                <p id="home" class="header-button">Início</p>
-            </a>
-            <a href="/Views/Imc.html">
-                <p class="header-button" id="header-imc">Descubra seu IMC</p>
-            </a>
-            <div class="icon header-button" id="menu-btn">
-                <span class="material-symbols-outlined user">
-                    account_circle
-                </span>
-                <div id="menu" class="menu esconder">
-                    <a href="/Views/Login.html" id="logout">
-                        <span class="material-symbols-outlined">
-                            logout
-                        </span>
-                        Sair
-                    </a>
+<body>
+    <header>
+        <div class="header">
+            <div id="container-logo">
+                <img src="/Pictures/logo.png" alt="logo" id="logo">
+            </div>
+            <div class="itens">
+                <a href="/Views/Home.html">
+                    <p id="home" class="header-button">Início</p>
+                </a>
+                <a href="/Views/Imc.html">
+                    <p class="header-button" id="header-imc">Descubra seu IMC</p>
+                </a>
+                <div class="icon header-button" id="menu-btn">
+                    <span class="material-symbols-outlined user">
+                        account_circle
+                    </span>
+                    <div id="menu" class="menu esconder">
+                        <a href="/Views/Login.html" id="logout">
+                            <span class="material-symbols-outlined">
+                                logout
+                            </span>
+                            Sair
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-
-<body>
+    </header>
     <div class="img-fundo">
         <div class="container">
-            <h1 id="title">Sabores saudáveis para uma vida vibrante.</br>
+            <h1 id="title">Sabores saudáveis para uma vida vibrante.<br>
                 Descubra agora!
             </h1>
             <p id="subtitle">Explore nossa seleção de receitas saudáveis</p>
@@ -110,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="retanguloCima" src="/Pictures/omelete.png" />
+                <img class="retanguloCima" src="/Pictures/omelete.png" alt="imagem-omelete">
             </a>
 
             <a class="receita" href="Receita.html">
@@ -131,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="retanguloCima" src="/Pictures/pote-salada.png" />
+                <img class="retanguloCima" src="/Pictures/pote-salada.png" alt="imagem-salada">
             </a>
 
             <a class="receita" href="Receita.html">
@@ -152,7 +151,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="retanguloCima" src="/Pictures/brownie-fit.jpg" />
+                <img class="retanguloCima" src="/Pictures/brownie-fit.jpg" alt="imagem-brownie">
             </a>
 
             <a class="receita" href="Receita.html">
@@ -173,7 +172,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="retanguloCima" src="/Pictures/torta.jpg" />
+                <img class="retanguloCima" src="/Pictures/torta.jpg" alt="imagem-torta">
             </a>
 
             <a class="receita" href="Receita.html">
@@ -194,11 +193,27 @@
                         </div>
                     </div>
                 </div>
-                <img class="retanguloCima" src="/Pictures/Mousse-de-Maracuja-Fit.jpg" />
+                <img class="retanguloCima" src="/Pictures/Mousse-de-Maracuja-Fit.jpg" alt="imagem-mousse">
             </a>
 
         </div>
     </div>
+
+    <footer>
+        <div class="footer">
+            <div class="container-footer">
+                <div class="alunos">
+                    <p id="title-alunos">Alunos</p>
+                    <p id="nome-alunos">Gustavo Morais Alves<br>Victor Hugo Kendi Takehana</p>
+                </div>
+                <div class="container-img">
+                    <img class="img-utf" src="/Pictures/utfpr.png" alt="logo-utfpr">
+
+                </div>
+            </div>
+            <p class="footer-ano">2024</p>
+        </div>
+    </footer>
     <script>
         document.getElementById("menu-btn").addEventListener("click", function () {
             var menu = document.getElementById("menu");
@@ -210,22 +225,5 @@
         });
     </script>
 </body>
-
-<footer>
-    <div class="footer">
-        <div class="container-footer">
-            <div class="alunos">
-                <p id="title-alunos">Alunos</p>
-                <p id="nome-alunos">Gustavo Morais Alves</p>
-                <p id="nome-alunos">Victor Hugo Kendi Takehana</p>
-            </div>
-            <div class="container-img">
-                <img class="img-utf" src="/Pictures/utfpr.png" />
-
-            </div>
-        </div>
-        <p class="footer-ano">2024</p>
-    </div>
-</footer>
 
 </html>

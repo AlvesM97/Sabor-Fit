@@ -12,40 +12,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <title>Descubra seu IMC</title>
 </head>
 
-<header>
-    <div class="header">
-        <div id="container-logo">
-            <img src="/Pictures/logo.png" alt="logo" id="logo">
-        </div>
-        <div class="itens">
-            <a href="/Views/Home.html">
-                <p class="header-button" id="home">Início</p>
-            </a>
-            <a href="/Views/Imc.html">
-                <p class="header-button" id="header-imc">Descubra seu IMC</p>
-            </a>
-            <div class="icon header-button" id="menu-btn">
-                <span class="material-symbols-outlined user">
-                    account_circle
-                </span>
-                <div id="menu" class="menu esconder">
-                    <a href="/Views/Login.html" id="logout">
-                        <span class="material-symbols-outlined">
-                            logout
-                        </span>
-                        Sair
-                    </a>
-                </div>
-        </div>
-    </div>
-</header>
-
 <body>
+    <header>
+        <div class="header">
+            <div id="container-logo">
+                <img src="/Pictures/logo.png" alt="logo" id="logo">
+            </div>
+            <div class="itens">
+                <a href="/Views/Home.html">
+                    <p class="header-button" id="home">Início</p>
+                </a>
+                <a href="/Views/Imc.html">
+                    <p class="header-button" id="header-imc">Descubra seu IMC</p>
+                </a>
+                <div class="icon header-button" id="menu-btn">
+                    <span class="material-symbols-outlined user">
+                        account_circle
+                    </span>
+                    <div id="menu" class="menu esconder">
+                        <a href="/Views/Login.html" id="logout">
+                            <span class="material-symbols-outlined">
+                                logout
+                            </span>
+                            Sair
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <div id="container">
         <div id="texto-explicativo">
             <h1>O que é e como calcular o IMC?</h1>
@@ -54,11 +54,11 @@
                 utilizada para avaliar se ela está dentro de um peso considerado saudável em relação à sua altura. Essa
                 é uma ferramenta útil para avaliar o risco de problemas de saúde relacionados ao peso, como obesidade ou
                 baixo peso.
-                <br />O cálculo do IMC é relativamente simples e é feito através da seguinte fórmula:<br/><br/>
+                <br>O cálculo do IMC é relativamente simples e é feito através da seguinte fórmula:<br><br>
                 <span id="formula">IMC = Peso (metros) / Altura² (kg)</span>
-                <br/><br/>
+                <br><br>
                 A interpretação dos valores de IMC é feita da seguinte forma:
-                <br />
+            </p>
                 <ul>
                     <li>IMC abaixo de 18,5: Abaixo do peso.</li>
                     <li>IMC entre 18,5 e 24,9: Peso saudável.</li>
@@ -67,7 +67,7 @@
                     <li>IMC entre 35,0 e 39,9: Obesidade grau II (severa).</li>
                     <li>IMC acima de 40,0: Obesidade grau III (mórbida).</li>
                 </ul>
-                <br />
+            <p>
                 É importante ressaltar que o IMC é uma ferramenta inicial de avaliação e não leva em consideração outros
                 fatores importantes como a composição corporal, como a proporção de gordura e músculos. Portanto, em
                 alguns casos, pode não ser completamente preciso para determinar o estado de saúde de uma pessoa. Sempre
@@ -128,69 +128,67 @@
             </div>
         </div>
     </div>
-</body>
+    <footer>
+        <div class="footer">
+            <div class="container-footer">
+                <div class="alunos">
+                    <p id="title-alunos">Alunos</p>
+                    <p id="nome-alunos">Gustavo Morais Alves<br>Victor Hugo Kendi Takehana</p>
+                </div>
+                <div class="container-img">
+                    <img class="img-utf" src="/Pictures/utfpr.png" alt="logo-utfpr">
 
-<footer>
-    <div class="footer">
-        <div class="container-footer">
-            <div class="alunos">
-                <p id="title-alunos">Alunos</p>
-                <p id="nome-alunos">Gustavo Morais Alves<br />Victor Hugo Kendi Takehana</p>
+                </div>
             </div>
-            <div class="container-img">
-                <img class="img-utf" src="/Pictures/utfpr.png" />
-
-            </div>
+            <p class="footer-ano">2024</p>
         </div>
-        <p class="footer-ano">2024</p>
-    </div>
-</footer>
+    </footer>
+    <script>
+        const form = document.getElementById('form');
 
-<script>
-    const form = document.getElementById('form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
 
-        const weight = document.getElementById('weight').value;
-        const height = document.getElementById('height').value;
+            const imc = (weight / (height * height)).toFixed(2);
 
-        const imc = (weight / (height * height)).toFixed(2);
+            const value = document.getElementById('value');
+            let description = '';
 
-        const value = document.getElementById('value');
-        let description = '';
+            value.classList.add('attention');
 
-        value.classList.add('attention');
+            document.getElementById('infos').classList.remove('hidden');
 
-        document.getElementById('infos').classList.remove('hidden');
+            if (imc < 18.5) {
+                description = 'Cuidado! Você está abaixo do peso'
+            } else if (imc >= 18.5 && imc < 25) {
+                description = 'Você está no peso "ideal"!'
+                value.classList.remove('attention');
+                value.classList.add('normal');
+            } else if (imc >= 25 && imc < 30) {
+                description = 'Cuidado! Você está com sobrepeso'
+            } else if (imc >= 30 && imc < 35) {
+                description = 'Cuidado! Você está com obesidade moderada!'
+            } else if (imc >= 35 && imc < 40) {
+                description = 'Cuidado! Você está com obesidade severa!'
+            } else {
+                description = 'Cuidado! Você está com obesidade mórbida!'
+            }
 
-        if (imc < 18.5) {
-            description = 'Cuidado! Você está abaixo do peso'
-        } else if (imc >= 18.5 && imc < 25) {
-            description = 'Você está no peso "ideal"!'
-            value.classList.remove('attention');
-            value.classList.add('normal');
-        } else if (imc >= 25 && imc < 30) {
-            description = 'Cuidado! Você está com sobrepeso'
-        } else if (imc >= 30 && imc < 35) {
-            description = 'Cuidado! Você está com obesidade moderada!'
-        } else if (imc >= 35 && imc < 40) {
-            description = 'Cuidado! Você está com obesidade severa!'
-        } else {
-            description = 'Cuidado! Você está com obesidade mórbida!'
-        }
-
-        value.textContent = imc.replace('.', ',');
-        document.getElementById('description').textContent = description
-    })
-    document.getElementById("menu-btn").addEventListener("click", function () {
+            value.textContent = imc.replace('.', ',');
+            document.getElementById('description').textContent = description
+        })
+        document.getElementById("menu-btn").addEventListener("click", function () {
             var menu = document.getElementById("menu");
             if (menu.classList.contains("esconder")) {
                 menu.classList.remove("esconder");
             } else {
                 menu.classList.add("esconder");
             }
-    });
-</script>
+        });
+    </script>
+</body>
 
 </html>

@@ -4,14 +4,27 @@ html {
     margin: 0;
     background-color: #99CA5B;
     padding: 0;
-    overflow: hidden
-}
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
 
+}
+#logo{
+    width: 50% !important;
+}
 .div-main {
     height: 100%;
     display: flex;
+    justify-content: center;
 }
-
+a:-webkit-any-link {
+    color: initial;
+    cursor: initial;
+    text-decoration: initial;
+    text-decoration-line: initial;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+}
 .form {
     width: 35%;
     height: 100%;
@@ -27,31 +40,42 @@ html {
     border-radius: 5px;
     width: 100%;
     height: 2.5em;
-    padding: 3px;
+    padding: 3px 10px 3px 12px;
+    font-family: "Montserrat", sans-serif;
+
 }
 
 .label {
     font-weight: bold;
+    margin-bottom: 10px;
+
 }
 
 .component-input {
     width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .button-submit{
     box-shadow: none;
     border: 0px #fff solid;
     width: 70%;
-    height: 2em;
-    border-radius: 5px;
+    height: 3em;
+    border-radius: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+
 }
 
 .button-submit:hover{
     background-color: rgb(223, 223, 223);
     cursor: pointer;
 }
-.imgFundo{
-    height: 101%;
-    width: 100%;
-    border-bottom-left-radius: 500px;
+#entrar{
+    cursor: pointer;
+    font-weight: bold;
+}
+#entrar:hover{
+    color: rgb(223, 223, 223);
 }

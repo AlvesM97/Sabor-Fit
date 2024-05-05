@@ -6,27 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../Css/Login.css" rel="stylesheet" />
     <link href="../Css/Main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Entrar</title>
 </head>
 
 <body>
     <div class="div-main">
+        
         <form class="form" id="loginForm" onsubmit="return validateForm()">
-            <h1>SABOR FIT</h1>
+            <img src="/Pictures/logo.png" alt="logo" id="logo">
 
             <div class="component-input">
                 <div class="email">
                     <label class="label" for="email">E-mail:</label>
-                    <input class="input" type="email" id="email" name="email">
+                    <input class="input" type="email" id="email" name="email" placeholder="Digite seu e-mail">
                 </div>
                 <div class="senha">
                     <label class="label" for="senha">Senha:</label>
-                    <input class="input" type="password" id="senha" name="senha">
+                    <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha">
                 </div>
             </div>
             <div class="container">
-                <label class="" for="possui_conta">Ainda não possui conta?</label>
-                <a href="Registrar.html" id="cadastrar">Cadastre-se</a><br>
+                <label class="" for="nao_possui_conta">Ainda não possui conta?</label>
+                <a href="Registrar.html" id="cadastrar">Cadastre-se</a><br/><br/>
                 <label id="esqueceuSenha" for="possui_conta">Esqueceu sua senha?</label>
             </div>
 
@@ -34,9 +38,6 @@
             <input class="button-submit" type="submit" value="Login" />
 
         </form>
-        <div>
-            <img src="../Pictures/imgLogin.png" alt="fundo" class="imgFundo">
-        </div>
     </div>
 
     <script>

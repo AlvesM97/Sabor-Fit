@@ -6,50 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../Css/Registrar.css" rel="stylesheet" />
     <link href="../Css/Main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Registrar</title>
 </head>
 
 <body>
     <div class="div-main">
-        <form class="form">
-            <h1>Sabor Fit</h1>
+        <form class="form" onsubmit="return validateForm()">
+            <img src="/Pictures/logo.png" alt="logo" id="logo">
+
 
             <div class="component-input">
-                <label class="label" for="nome">Nome:</label><br>
-                <input class="input" type="text" id="nome" name="nome"><br><br>
+                <label class="label" for="nome">Nome:</label>
+                <input class="input" type="text" id="nome" name="nome" placeholder="Digite seu nome">
             </div>
 
             <div class="component-input">
-                <label class="label" for="email">E-mail:</label><br>
-                <input class="input" type="email" id="email" name="email"><br><br>
+                <label class="label" for="email">E-mail:</label>
+                <input class="input" type="email" id="email" name="email" placeholder="Digite seu e-mail">
             </div>
 
             <div class="component-input">
-                <label class="label" for="senha">Senha:</label><br>
-                <input class="input" type="password" id="senha" name="senha"><br><br>
+                <label class="label" for="senha">Senha:</label>
+                <input class="input" type="password" id="senha" name="senha" placeholder="Digite sua senha">
             </div>
 
             <div class="component-input">
-                <label class="label" for="confirmar_senha">Confirmar Senha:</label><br>
-                <input class="input" type="password" id="confirmar_senha" name="confirmar_senha"><br><br>
+                <label class="label" for="confirmar_senha">Confirmar Senha:</label>
+                <input class="input" type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha">
             </div>
 
             <div class="component-input">
-                <label class="label" for="data_nascimento">Data de Nascimento:</label><br>
-                <input class="input" type="date" id="data_nascimento" name="data_nascimento"><br><br>
+                <label class="label" for="data_nascimento">Data de Nascimento:</label>
+                <input class="input" type="date" id="data_nascimento" name="data_nascimento">
             </div>
 
             <div class="">
-                <label class="label" for="possui_conta">Já possui conta?</label>
-                <a href="Login.html">Entrar</a>
+                <label for="possui_conta">Já possui conta?</label>
+                <a href="Login.html" id="entrar">Entrar</a>
             </div>
 
             <input class="button-submit" type="submit" value="Cadastrar">
         </form>
-        <div>
-            <img src="../Pictures/imgLogin.png" alt="Comida deliciosa" class="imgFundo">
-        </div>
     </div>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var email = document.getElementById("senha").value;
+            var senha = document.getElementById("confirmar_senha").value;
+            var email = document.getElementById("data_nascimento").value;
+
+
+            if (nome === "" || email === "" || senha === "" || confirmar_senha === "" || data_nascimento === "") {
+                alert("Por favor, preencha todos os campos.");
+                return false;
+            }
+            window.location.href = "Home.html";
+            return false;
+        }
+    </script>
 </body>
 
 </html>

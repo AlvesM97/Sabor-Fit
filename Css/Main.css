@@ -2,20 +2,31 @@ body {
     padding: 0;
     margin: 0;
 }
-
-.header {
-    background-color: #99CA5B;
+#logo{
+    width: 16%;
 }
+#container-logo{
+    display: flex;
+    padding-left: 30px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #99CA5B;
 
+}
+#header-imc{
+    width: max-content;
+}
 .header-button {
     cursor: pointer;
 }
 
 .itens {
     display: flex;
-    justify-content: flex-end;
     margin-right: 30px;
     gap: 40px;
+    align-items: center;
 }
 
 .icon {

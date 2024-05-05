@@ -21,36 +21,37 @@
     <title>Receita</title>
 </head>
 
-<header>
-    <div class="header">
-        <div id="container-logo">
-            <img src="/Pictures/logo.png" alt="logo" id="logo">
-        </div>
-        <div class="itens">
-            <a href="/Views/Home.html">
-                <p id="home" class="header-button">Início</p>
-            </a>
-            <a href="/Views/Imc.html">
-                <p class="header-button" id="header-imc">Descubra seu IMC</p>
-            </a>
-            <div class="icon header-button" id="menu-btn">
-                <span class="material-symbols-outlined user">
-                    account_circle
-                </span>
-                <div id="menu" class="menu esconder">
-                    <a href="/Views/Login.html" id="logout">
-                        <span class="material-symbols-outlined">
-                            logout
-                        </span>
-                        Sair
-                    </a>
+
+
+<body>
+    <header>
+        <div class="header">
+            <div id="container-logo">
+                <img src="/Pictures/logo.png" alt="logo" id="logo">
+            </div>
+            <div class="itens">
+                <a href="/Views/Home.html">
+                    <p id="home" class="header-button">Início</p>
+                </a>
+                <a href="/Views/Imc.html">
+                    <p class="header-button" id="header-imc">Descubra seu IMC</p>
+                </a>
+                <div class="icon header-button" id="menu-btn">
+                    <span class="material-symbols-outlined user">
+                        account_circle
+                    </span>
+                    <div id="menu" class="menu esconder">
+                        <a href="/Views/Login.html" id="logout">
+                            <span class="material-symbols-outlined">
+                                logout
+                            </span>
+                            Sair
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-
-<body>
+    </header>
     <div class="main-page">
         <div class="sub-page">
             <div>
@@ -61,7 +62,7 @@
                     <div class="item">Porções: 2</div>
                 </div>
             </div>
-            <img class="img" src="/Pictures/pote-salada.png" />
+            <img class="img" alt="img-salada" src="/Pictures/pote-salada.png" />
         </div>
         <div>
             <h2>Ingredientes</h2>
@@ -97,43 +98,38 @@
                 <input type="checkbox" name="check4" id="check4">
                 <p>4. Sirva sobre a salada.</p>
             </div>
-
-
-
-
-
-
-
-
         </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div class="container-footer">
+                <div class="alunos">
+                    <p id="title-alunos">Alunos</p>
+                    <p id="nome-alunos1">Gustavo Morais Alves</p>
+                    <p id="nome-alunos2">Victor Hugo Kendi Takehana</p>
+                </div>
+                <div class="container-img">
+                    <img class="img-utf" alt="img-utf" src="/Pictures/utfpr.png" />
+
+                </div>
+            </div>
+            <p class="footer-ano">2024</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            if (menu.classList.contains("esconder")) {
+                menu.classList.remove("esconder");
+            } else {
+                menu.classList.add("esconder");
+            }
+        });
+    </script>
 </body>
 
-<footer>
-    <div class="footer">
-        <div class="container-footer">
-            <div class="alunos">
-                <p id="title-alunos">Alunos</p>
-                <p id="nome-alunos">Gustavo Morais Alves<br />Victor Hugo Kendi Takehana</p>
-            </div>
-            <div class="container-img">
-                <img class="img-utf" src="/Pictures/utfpr.png" />
 
-            </div>
-        </div>
-        <p class="footer-ano">2024</p>
-    </div>
-</footer>
 
-<script>
-    document.getElementById("menu-btn").addEventListener("click", function () {
-        var menu = document.getElementById("menu");
-        if (menu.classList.contains("esconder")) {
-            menu.classList.remove("esconder");
-        } else {
-            menu.classList.add("esconder");
-        }
-    });
-</script>
+
 
 </html>

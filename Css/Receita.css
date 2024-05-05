@@ -5,6 +5,13 @@
 .header-button {
     cursor: pointer;
 }
+body{
+    font-family: "Montserrat", sans-serif;
+
+}
+#tempo{
+    width: max-content;
+}
 
 .itens {
     display: flex;

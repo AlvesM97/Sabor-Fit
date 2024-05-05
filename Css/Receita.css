@@ -22,3 +22,44 @@ a:-webkit-any-link {
     text-decoration-style: initial;
     text-decoration-color: initial;
 }
+
+.main-page {
+    margin: 5% 10%;
+    padding: 1em;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+}
+
+.sub-page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itens-informaions{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+}
+
+.item {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    height: 1em;
+    width: 12em;
+    padding: 1em;
+    justify-content: center;
+    display: flex;
+    background-color: #99CA5B;
+}
+
+.img {
+    width: 20em;
+    height: 15em;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 24px
+}
+
+.check-itens{
+    display: flex;
+}

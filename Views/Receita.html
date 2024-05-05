@@ -18,29 +18,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>Home</title>
+    <title>Receita</title>
 </head>
 
 <header>
     <div class="header">
+        <div id="container-logo">
+            <img src="/Pictures/logo.png" alt="logo" id="logo">
+        </div>
         <div class="itens">
             <a href="/Views/Home.html">
                 <p id="home" class="header-button">Início</p>
             </a>
             <a href="/Views/Imc.html">
-                <p class="header-button">Descubra seu IMC</p>
+                <p class="header-button" id="header-imc">Descubra seu IMC</p>
             </a>
-            <div class="icon header-button">
+            <div class="icon header-button" id="menu-btn">
                 <span class="material-symbols-outlined user">
                     account_circle
                 </span>
+                <div id="menu" class="menu esconder">
+                    <a href="/Views/Login.html" id="logout">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span>
+                        Sair
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
 <body>
+    <div class="main-page">
+        <div class="sub-page">
+            <div>
+                <h1>Salada Caesar</h1>
+                <div class="itens-informaions">
+                    <div class="item">Tempo de Preparo: 10 min</div>
+                    <div class="item">Kcal: 200</div>
+                    <div class="item">Porções: 2</div>
+                </div>
+            </div>
+            <img class="img" src="/Pictures/pote-salada.png" />
+        </div>
+        <div>
+            <h2>Ingredientes</h2>
+            <h3>Salada</h3>
+            <p>1 colher (sopa) de óleo</p>
+            <p>1 peito de frango em tiras</p>
+            <p>1 maço de alface americana rasgada</p>
+            <p>1 xícara (chá) de queijo parmesão ralado grossseiramente</p>
+            <p>2 xícaras (chá) de croutons</p>
+            <h3>Molho</h3>
+            <p> 1 colher (chá) de MAGGI® Fondor</p>
+            <p>meia caixinha de NESTLÉ® Creme de Leite</p>
+            <p>1 colher (sopa) de queijo parmesão ralado finamente</p>
+        </div>
+        <div>
+            <br>
+            <h2>Modo de Preparo</h2>
+            <h3>Salada</h3>
+            <div class="check-itens">
+                <input type="checkbox" name="check1" id="check1">
+                <p>1. Em uma frigideira, aqueça o óleo e doure o frango por cerca de 5 minutos.</p>
+            </div>
+            <div class="check-itens">
+                <input type="checkbox" name="check2" id="check2">
+                <p>2. Em uma saladeira, disponha as folhas de alface , o frango, e o queijo parmesão e os croûtons.</p>
+            </div>
+            <h3>Molho</h3>
+            <div class="check-itens">
+                <input type="checkbox" name="check3" id="check3">
+                <p>3. Em um recipiente, misture todos os ingredientes.</p>
+            </div>
+            <div class="check-itens">
+                <input type="checkbox" name="check4" id="check4">
+                <p>4. Sirva sobre a salada.</p>
+            </div>
 
+
+
+
+
+
+
+
+        </div>
+    </div>
 </body>
 
 <footer>
@@ -58,5 +124,16 @@
         <p class="footer-ano">2024</p>
     </div>
 </footer>
+
+<script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("esconder")) {
+            menu.classList.remove("esconder");
+        } else {
+            menu.classList.add("esconder");
+        }
+    });
+</script>
 
 </html>

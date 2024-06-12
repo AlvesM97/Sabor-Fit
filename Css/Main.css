@@ -95,7 +95,7 @@ body {
     padding-bottom: 30px;
 }
 
-p {
+p, h1, h2 {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -111,17 +111,29 @@ p {
     font-family: "Montserrat", sans-serif;
     display: flex;
     cursor: auto;
+    flex-direction: column;
 }
-#logout{
-    cursor: pointer;
+.menu-header{
+    cursor: pointer !important;
     display: flex;
     align-items: center;
     justify-self: center;
+    gap: 13px;
+    margin-top: 11px;
 }
-#logout:hover{
+.menu-header:hover{
     color: rgba(0, 0, 0, 0.5);
 
 }
 .esconder {
     display: none;
+}
+a:-webkit-any-link {
+    color: initial;
+    cursor: initial;
+    text-decoration: initial;
+    text-decoration-line: initial;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
 }

@@ -14,15 +14,6 @@
 #formula{
     font-weight: bold;
 }
-a:-webkit-any-link {
-    color: initial;
-    cursor: initial;
-    text-decoration: initial;
-    text-decoration-line: initial;
-    text-decoration-thickness: initial;
-    text-decoration-style: initial;
-    text-decoration-color: initial;
-}
 
 .user {
     font-size: 35px !important;
@@ -124,7 +115,10 @@ body {
     font-family: "Montserrat", sans-serif;
 
 }
+#calculate:hover{
+    background-color: #7fa849;
 
+}
 #result{
     display: flex;
     gap: 2rem;

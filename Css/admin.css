@@ -1,0 +1,139 @@
+.container{
+    /* padding: 50px; */
+    padding: 30px 160px 160px;
+}
+.header-cadastrar{
+    display: flex;
+    align-items: center;
+}
+#title-cadastrar{
+    margin-right: 58%;
+    flex: 1;
+}
+.input-cadastrar{
+    height: 40px;
+    padding-left: 12px;
+}
+.input-filtro{
+    height: 30px;
+    padding-left: 12px;
+    width: 20%;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-remover{
+    background-color: #C6C6C6;
+    width: 17%;
+    height: 36px;
+    border: none;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#btn-cadastrar:hover, #btn-modal-cancelar:hover{
+    background-color: #7fa849;
+
+}
+#btn-remover:hover, #btn-modal-excluir:hover{
+    background-color: #929292;
+
+}
+.estilo-btn{
+    width: 14%;
+    height: 41px;
+    border: none;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #99CA5B;
+}
+
+.container-btn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+input{
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #C6C6C6;
+}
+input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+form, button, li, ul{
+    font-family: "Montserrat", sans-serif;
+
+}
+.label-cadastrar{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+
+}
+#modal-remover{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-modal {
+    width: 35%;
+    background-color: white;
+    border-radius: 20px;
+    display: inline-block;
+    height: 45%;
+    align-content: center;
+}
+#overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.btn-modal{
+    width: 25%;
+    height: 41px;
+    border: none;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+#btn-modal-cancelar{
+    background-color: #99CA5B;
+
+}
+#btn-modal-excluir{
+    background-color: #C6C6C6;
+
+}
+.container-btn-modal{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 70px;
+}
+#title-modal{
+    font-weight: 600;
+    font-size: 18px;
+    padding: 16px 0 16px;
+
+}

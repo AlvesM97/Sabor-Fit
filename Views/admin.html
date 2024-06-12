@@ -56,13 +56,14 @@
             <h2 id="title-cadastrar">Cadastrar novo usuário</h2>
             <button type="button" id="btn-remover" onclick="abreModal()">Remover todos usuários</button>
         </div>
-        
+
         <form id="form">
             <label for="nameInput" class="label-cadastrar">Nome:</label>
             <input type="text" id="input-name" class="input-cadastrar" placeholder="Digite o nome do usuário" required>
 
             <label for="emailInput" class="label-cadastrar">E-mail:</label>
-            <input type="email" id="input-email" class="input-cadastrar" placeholder="Digite o e-mail do usuário" required>
+            <input type="email" id="input-email" class="input-cadastrar" placeholder="Digite o e-mail do usuário"
+                required>
 
             <div class="container-btn">
                 <button type="submit" class="estilo-btn" id="btn-cadastrar">Cadastrar</button>
@@ -70,21 +71,34 @@
 
 
         </form>
-        <div class="container-filtro">
-            <p>Filtrar usuário por nome</p>
+        <div class="container-filtro" id="filtro">
+            <p id="title-filtro">Filtrar usuário por nome:</p>
             <input type="text" id="inputFilter" class="input-filtro" placeholder="Digite o nome do usuário">
-            <button type="button" onclick="filtrarNome()">Filtrar</button>
-            <button type="button" onclick="limparFiltro()">Limpar filtro</button>
+            <button type="button" id="btn-filtrar" onclick="filtrarNome()">Filtrar</button>
+            <button type="button" id="btn-limpar" onclick="limparFiltro()">Limpar filtro</button>
+            <p id="usuario-encontrado"> Usuário encontrado! </p>
         </div>
-        <ul id="lista-usuarios"></ul>
+        <table id="lista-usuarios" class="tabela">
+            <thead>
+                <tr id="legenda">
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
 
         <div id="modal-remover">
             <div class="container-modal">
                 <div>
                     <p id="title-modal">Você tem certeza que deseja excluir todos os usuários?</p>
                     <div class="container-btn-modal">
-                        <button type="button" onclick="clearUsuarios()" class="btn-modal" id="btn-modal-excluir">Sim, excluir</button>
-                        <button type="button" onclick="fechaModal()" class="btn-modal" id="btn-modal-cancelar">Não, cancelar</button>
+                        <button type="button" onclick="clearUsuarios()" class="btn-modal" id="btn-modal-excluir">Sim,
+                            excluir</button>
+                        <button type="button" onclick="fechaModal()" class="btn-modal" id="btn-modal-cancelar">Não,
+                            cancelar</button>
                     </div>
                 </div>
             </div>

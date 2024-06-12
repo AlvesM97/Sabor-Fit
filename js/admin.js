@@ -1,12 +1,9 @@
 var listaUsuarios = [];
 var lastId = localStorage.getItem('lastId') ? parseInt(localStorage.getItem('lastId')) : 0; //ternario para saber se ja existe algum id
-
+const legenda = document.getElementById('legenda')
+const filtro = document.getElementById('usuario-encontrado');
 const modal = document.getElementById("modal-remover")
 const overlay = document.getElementById("overlay")
-
-overlay.style.display = "none"
-modal.style.display = "none"
-
 
 const data = new Date()
 var dia = data.getDate()
@@ -48,7 +45,8 @@ function excluirUsuario(usuarioId) {
   if (novaListaUsuarios.length < listaUsuarios.length) { //verifica se a lista atualizada é diferente da lista original
     listaUsuarios = novaListaUsuarios;
     localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
-    renderListaUsuarios();
+    limparFiltro()
+
   } else {
     alert('Usuário não encontrado.');
   }
@@ -62,14 +60,23 @@ function listaLocalStorage() {
 
 // Função para renderizar a lista de usuário no HTML
 function renderListaUsuarios() {
-  var listaUsuariosElement = document.getElementById('lista-usuarios');
+  var listaUsuariosElement = document.querySelector('#lista-usuarios tbody');
   listaUsuariosElement.innerHTML = ''; //limpa o conteúdo HTML do elemento listaUsuariosElement
 
-  listaUsuarios.forEach(function (usuario) {
-    var lista = document.createElement('li');
-    //renderiza a lista de usuário. Itera sobre cada usuario na lista encontrada e cria um <li> para cada usuario
-    lista.innerHTML = '<span class="usuario-name">' + usuario.name + '</span> (E-mail: ' + usuario.email + ' - Data: ' + usuario.dataFormatada + ') <button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button>';
+  if (listaUsuarios.length > 0) {
+    legenda.style.display = 'table-row'
+  }else{
+    legenda.style.display = 'none'
+  }
 
+  listaUsuarios.forEach(function (usuario) {
+    var lista = document.createElement('tr');
+
+    //renderiza a lista de usuário. Itera sobre cada usuario na lista encontrada e cria um <li> para cada usuario
+    lista.innerHTML =  '<td>' + usuario.name + '</td>' +
+    '<td>' + usuario.email + '</td>' +
+    '<td>' + usuario.dataFormatada + '</td>' +
+    '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button></td>';
 
     listaUsuariosElement.appendChild(lista);
   });
@@ -92,22 +99,30 @@ function limparCampos() {
 
 //Função para filtrar o usuário pelo nome
 function filtrarNome() {
+  filtro.style.display = 'none'
   var inputName = document.getElementById('inputFilter');
   var name = inputName.value.trim(); // Remove espaços em branco no início e no fim
   var listaFiltrada = listaUsuarios.filter(function (usuario) {
     return usuario.name.toLowerCase() === name.toLowerCase(); // Compara o nome ignorando maiúsculas e minúsculas
   });
 
-  var usuarioFiltradoElement = document.getElementById('lista-usuarios');
+  var usuarioFiltradoElement = document.querySelector('#lista-usuarios tbody');  
   if (listaFiltrada.length > 0) {
+    filtro.style.display = 'block'
     usuarioFiltradoElement.innerHTML = '';
+    legenda.style.display = ' table-row'
     listaFiltrada.forEach(function (usuario) {
-      var lista = document.createElement('li');
-      lista.innerHTML = 'Usuário encontrado: <span class="usuario-name">' + usuario.name + '</span> (E-mail: ' + usuario.email + ' Data: ' + usuario.dataFormatada + ') <button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button>';
+      var lista = document.createElement('tr');
+      lista.innerHTML =  '<td>' + usuario.name + '</td>' +
+      '<td>' + usuario.email + '</td>' +
+      '<td>' + usuario.dataFormatada + '</td>' +
+      '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button></td>'
       usuarioFiltradoElement.appendChild(lista);
     });
   } else {
-    usuarioFiltradoElement.textContent = 'Usuário não encontrado.';
+    legenda.style.display = 'none'
+    usuarioFiltradoElement.innerHTML = '<tr><td>Usuário não encontrado.</td></tr>';
+
   }
 }
 
@@ -115,6 +130,8 @@ function filtrarNome() {
 function limparFiltro() {
   var inputName = document.getElementById('inputFilter');
   inputName.value = ''
+  legenda.style.display = ' table-row'
+  filtro.style.display = 'none'
   renderListaUsuarios()
 }
 

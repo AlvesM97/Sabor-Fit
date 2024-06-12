@@ -14,9 +14,9 @@
     padding-left: 12px;
 }
 .input-filtro{
-    height: 30px;
+    height: 25px;
     padding-left: 12px;
-    width: 20%;
+    width: 24%;
 }
 #form{
     display: flex;
@@ -68,7 +68,7 @@ input::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
 }
-form, button, li, ul{
+form, button, th, td, #usuario-encontrado{
     font-family: "Montserrat", sans-serif;
 
 }
@@ -87,7 +87,7 @@ form, button, li, ul{
     z-index: 1;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -106,6 +106,7 @@ form, button, li, ul{
     position: fixed;
     left: 0;
     top: 0;
+    display: none;
 }
 .btn-modal{
     width: 25%;
@@ -133,6 +134,65 @@ form, button, li, ul{
 #title-modal{
     font-weight: 600;
     font-size: 18px;
-    padding: 16px 0 16px;
+    padding: 0 16px 0 16px;
+}
 
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: left;
+}
+.tabela thead tr {
+    background-color: #99CA5B;
+    text-align: left;
+    font-weight: 600;
+    color: black;
+    border: 1px solid #dddddd;
+}
+.tabela th, .tabela td {
+    padding: 12px 15px;
+}
+.tabela tbody tr {
+    border: 1px solid #dddddd;
+}
+.tabela tbody tr:nth-of-type(even) { /*para deixar as linhas pares com a cor cinza*/
+    background-color: #f3f3f3; 
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+#usuario-encontrado{
+    font-weight: 600;
+    display: none;
+    position: absolute;
+    right: 162px;
+}
+.container-filtro{
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    gap: 8px;
+}
+#title-filtro{
+    font-weight: 600;
+}
+#btn-filtrar, #btn-limpar{
+    width: 11%;
+    height: 28.6px;
+    border-radius: 5px;
+    border: 1px solid #C6C6C6;
+    font-weight: 500;
+    font-size: 14px;
 }

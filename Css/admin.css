@@ -24,21 +24,16 @@
 }
 
 #btn-remover{
-    background-color: #C6C6C6;
-    width: 17%;
-    height: 36px;
-    border: none;
-    border-radius: 22px;
-    font-weight: 600;
-    font-size: 13px;
-    cursor: pointer;
+    width: 13%;
+    position: absolute;
+    right: 161px;
 }
 
 #btn-cadastrar:hover, #btn-modal-cancelar:hover{
     background-color: #7fa849;
 
 }
-#btn-remover:hover, #btn-modal-excluir:hover{
+#btn-modal-excluir:hover{
     background-color: #929292;
 
 }
@@ -170,14 +165,11 @@ form, button, th, td, #usuario-encontrado{
     border-radius: 5px;
 }
 .delete-button:hover {
-    background-color: #c0392b;
+    background-color: #af2f21;
 }
 
 #usuario-encontrado{
-    font-weight: 600;
     display: none;
-    position: absolute;
-    right: 162px;
 }
 .container-filtro{
     display: flex;
@@ -188,11 +180,15 @@ form, button, th, td, #usuario-encontrado{
 #title-filtro{
     font-weight: 600;
 }
-#btn-filtrar, #btn-limpar{
+.btn-filtro{
     width: 11%;
     height: 28.6px;
     border-radius: 5px;
     border: 1px solid #C6C6C6;
     font-weight: 500;
     font-size: 14px;
+    cursor: pointer;
+}
+.btn-filtro:hover{
+    background-color: #d3d3d3;
 }

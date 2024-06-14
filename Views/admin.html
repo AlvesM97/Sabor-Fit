@@ -54,7 +54,7 @@
         <h1>Admin</h1>
         <div class="header-cadastrar">
             <h2 id="title-cadastrar">Cadastrar novo usuário</h2>
-            <button type="button" id="btn-remover" onclick="abreModal()">Remover todos usuários</button>
+            <button type="submit" class="btn-filtro" id="btn-limpar-campos" onclick="limparCampos()">Limpar campos</button>
         </div>
 
         <form id="form">
@@ -68,16 +68,16 @@
             <div class="container-btn">
                 <button type="submit" class="estilo-btn" id="btn-cadastrar">Cadastrar</button>
             </div>
-
-
         </form>
         <div class="container-filtro" id="filtro">
             <p id="title-filtro">Filtrar usuário por nome:</p>
             <input type="text" id="inputFilter" class="input-filtro" placeholder="Digite o nome do usuário">
-            <button type="button" id="btn-filtrar" onclick="filtrarNome()">Filtrar</button>
-            <button type="button" id="btn-limpar" onclick="limparFiltro()">Limpar filtro</button>
-            <p id="usuario-encontrado"> Usuário encontrado! </p>
+            <button type="button" id="btn-filtrar" class="btn-filtro" onclick="filtrarNome()">Filtrar</button>
+            <button type="button" id="btn-limpar" class="btn-filtro" onclick="limparFiltro()">Limpar filtro</button>
+            <button type="button" class="btn-filtro" id="btn-remover" onclick="abreModal()">Remover todos usuários</button>
         </div>
+        <p id="usuario-encontrado"> Usuário encontrado! </p>
+
         <table id="lista-usuarios" class="tabela">
             <thead>
                 <tr id="legenda">

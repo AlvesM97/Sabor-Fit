@@ -76,7 +76,7 @@ function renderListaUsuarios() {
     lista.innerHTML =  '<td>' + usuario.name + '</td>' +
     '<td>' + usuario.email + '</td>' +
     '<td>' + usuario.dataFormatada + '</td>' +
-    '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button></td>';
+    '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')"><span class="material-symbols-outlined ">delete</span></button></td>'
 
     listaUsuariosElement.appendChild(lista);
   });
@@ -116,13 +116,13 @@ function filtrarNome() {
       lista.innerHTML =  '<td>' + usuario.name + '</td>' +
       '<td>' + usuario.email + '</td>' +
       '<td>' + usuario.dataFormatada + '</td>' +
-      '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')">Excluir</button></td>'
+      '<td><button class="delete-button" onclick="excluirUsuario(' + usuario.id + ')"><span class="material-symbols-outlined">delete</span></button></td>'
+      
       usuarioFiltradoElement.appendChild(lista);
     });
   } else {
     legenda.style.display = 'none'
-    usuarioFiltradoElement.innerHTML = '<tr><td>Usuário não encontrado.</td></tr>';
-
+    usuarioFiltradoElement.innerHTML = '<p>Usuário não encontrado.</p>';
   }
 }
 

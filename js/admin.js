@@ -46,6 +46,9 @@ function excluirUsuario(usuarioId) {
     listaUsuarios = novaListaUsuarios;
     localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
     limparFiltro()
+    if(listaUsuarios.length == []){
+      lastId = 0
+    }
 
   } else {
     alert('Usuário não encontrado.');

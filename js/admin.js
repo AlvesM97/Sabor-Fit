@@ -29,7 +29,7 @@ document.getElementById("menu-btn").addEventListener("click", function () {
 
 // Função para adicionar usuário
 function adicionarUsuario(name, email) {
-  var novoUsuario = { id: ++lastId, name: name, email: email, dataFormatada }; //cria um novo objetivo de usuario (novoUsuario), com as propriedades id, name e email
+  var novoUsuario = { id: ++lastId, name: name, email: email, dataFormatada }; //cria um novo objetivo de usuario (novoUsuario), com as propriedades id, name, email e data
   listaUsuarios.push(novoUsuario); //comando que adiciona o novo usuario ao final da lista de usuarios
   localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios)); //o JSON.stringfy converte o objeto JavaScript em uma string JSON
   localStorage.setItem('lastId', lastId);
@@ -75,7 +75,7 @@ function renderListaUsuarios() {
   listaUsuarios.forEach(function (usuario) {
     var lista = document.createElement('tr');
 
-    //renderiza a lista de usuário. Itera sobre cada usuario na lista encontrada e cria um <li> para cada usuario
+    //renderiza a lista de usuário. Itera sobre cada usuario na lista encontrada e cria um <tr> para cada usuario
     lista.innerHTML =  '<td>' + usuario.name + '</td>' +
     '<td>' + usuario.email + '</td>' +
     '<td>' + usuario.dataFormatada + '</td>' +
@@ -93,6 +93,7 @@ function clearUsuarios() {
   renderListaUsuarios();
   fechaModal();
 }
+//Função para limpar campos de input
 function limparCampos() {
   var inputName = document.getElementById('input-name');
   var inputEmail = document.getElementById('input-email');
